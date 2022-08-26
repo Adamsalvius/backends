@@ -6,6 +6,9 @@ const server = http.createServer(app);
 const { Server } = require("socket.io");
 const PORT = process.env.PORT; /* || 666 */
 const db = require("./config/db");
+import { getMessages } from "./models/messages.model";
+import { getUsers } from "./models/users.model";
+import { getRooms, getRoomsByName} from "./models/rooms.model";
 
     const io = new Server(server, {
         cors: {
@@ -17,7 +20,7 @@ const db = require("./config/db");
 
 /* , "http://localhost:3000", "https://testars.herokuapp.com/" */
 
-async function getRooms() { 
+/* async function getRooms() { 
     const sql = `SELECT * FROM rooms`
 
     const result = await db.query(sql)
@@ -47,7 +50,7 @@ async function getMessages(room) {
     const result = await db.query(sql, [room])
     return result.rows
     }
-
+ */
 function straightToTheLog(data) {
     const fsData = JSON.stringify(data);
     if (data.message) {
