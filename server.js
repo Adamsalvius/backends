@@ -51,16 +51,16 @@ async function getMessages(room) {
     return result.rows
     } 
 
-function straightToTheLog(data) {
+function logit(data) {
     const fsData = JSON.stringify(data);
     if (data.message) {
-        fs.appendFile("DOOM_LOG.txt", fsData + "\n", (error) => {
+        fs.appendFile("Logger.txt", fsData + "\n", (error) => {
             if (error) {
                 return (
-                console.log("Error writing to DOOM_LOG.txt")
+                console.log("Error writing to Logger.txt")
                 )
             } else {
-               return console.log("Attemp to store data in DOOM_LOG.txt was successful")
+               return console.log("Attemp to store data in Logger.txt was successful")
             }
         })
     }
@@ -74,7 +74,7 @@ io.use((socket, next) => {
             user: user,
             room: room
         }
-      straightToTheLog(data);
+      logit(data);
     });
     next();
   });
@@ -91,12 +91,12 @@ io.on(`connection`, (socket) => {
             db.query(sql, [room], (error) => {
                 if (error) console.error(error.message)
             }) 
-            console.log(`Created room: ${room}`)
-            socket.emit("room_created", room)
+            console.log(`Created ${room}`)
+            socket.emit("chatroom_created", room)
         }
         else {
-           console.log("Room already exists")
-         socket.emit("room_error", `Error creating room "${room}", it might already exist`)
+           console.log("There is a room like that already")
+         socket.emit("chatroom_err", `did not create room "${room}". there prob is one with the same name `)
         }
      }
     )
@@ -105,24 +105,24 @@ io.on(`connection`, (socket) => {
         const rooms = await getRooms();
       
         if (rooms.filter(e => e.name === room).length > 0) {
-        console.log(`${socket.id} has joined ${room}`)
+        console.log(`${socket.id} joined ${room}`)
         socket.join(room);
     
         io.to(room).emit("joined_room", socket.id);
         const messages = await getMessages(room);
-        socket.emit("welcome_to_room", [messages, room])
+        socket.emit("welcome_user", [messages, room])
         } else {
-            socket.emit("room_error", "No such room, create one or try another name")
+            socket.emit("chatroom_err", "there is no such room")
         }
       })
     
-      socket.on("leave_room", (data) => {
+      socket.on("chatroom_leave", (data) => {
         console.log(`${socket.id} has left room ${data}`)
         socket.leave(data);
         console.log(socket.rooms);
       })
 
-      socket.on("remove_room", async function (room) {
+      socket.on("delete_chatroom", async function (room) {
         const sql = `DELETE FROM rooms WHERE name = $1`
         const rooms = await getRooms();
         if (rooms.filter(e => e.name === room).length > 0) {
@@ -131,11 +131,11 @@ io.on(`connection`, (socket) => {
             })
         } else {
             console.log("No such room");
-            socket.emit("error_remove_room", "No such room")
+            socket.emit("err_delete_chatroom", "No such room")
         }
       })
 
-      socket.on("get_rooms", async function () {
+      socket.on("get_chatrooms", async function () {
           const rooms = await getRoomsByName();
          
         socket.emit("all_rooms", rooms)
@@ -143,7 +143,7 @@ io.on(`connection`, (socket) => {
     
       io.emit("new_client", "A new client has joined");
 
-      socket.on("create_user", async function (user) {
+      socket.on("register_user", async function (user) {
         const sql = `INSERT INTO users (name) VALUES ($1)`
         const users = await getUsers();
         
