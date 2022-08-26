@@ -1,4 +1,4 @@
-const db = require("./config/db");
+const db = require("../config/db");
 
 async function getMessages(room) { 
     const sql = `SELECT * FROM messages WHERE room_id = $1`

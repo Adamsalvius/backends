@@ -1,4 +1,4 @@
-const db = require("./config/db");
+const db = require("../config/db");
 export async function getRooms() { 
     const sql = `SELECT * FROM rooms`
 
