@@ -13,4 +13,6 @@ const db = require("../config/db");
     return result.rows
         
     }
-    module.exports = {getRooms, getRoomsByName}
+    module.exports = {
+        getRooms,
+        getRoomsByName}
