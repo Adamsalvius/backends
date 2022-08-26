@@ -1,8 +1,10 @@
 {
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.1",
     "pg": "^8.7.3",
-    "socket.io": "^4.5.1"
+    "socket.io": "^4.5.1",
+    "sqlite3": "^5.0.11"
   },
   "scripts": {
     "start": "node server.js"
@@ -13,5 +15,17 @@
   "devDependencies": {
     "eslint": "^8.22.0",
     "eslint-plugin-react": "^7.30.1"
-  }
+  },
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adamsalvius/backends.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Adamsalvius/backends/issues"
+  },
+  "homepage": "https://github.com/Adamsalvius/backends#readme"
 }
