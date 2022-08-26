@@ -4,8 +4,8 @@ const http = require(`http`);
 const fs = require("fs");
 const server = http.createServer(app);
 const { Server } = require("socket.io");
-const PORT = process.env.PORT || 666
-const db = require("./config/db")
+const PORT = process.env.PORT; /* || 666 */
+const db = require("./config/db");
 
     const io = new Server(server, {
         cors: {
