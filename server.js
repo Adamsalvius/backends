@@ -9,7 +9,7 @@ const db = require("./config/db");
 
     const io = new Server(server, {
         cors: {
-        origin: ["*"],
+        origin: ["*", "https://testars.herokuapp.com" ],
         methods: ["GET", "POST", "OPTIONS"],
         headers: "Content-Type"
         }
