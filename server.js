@@ -9,13 +9,13 @@ const db = require("./config/db")
 
     const io = new Server(server, {
         cors: {
-        origin: ["*", "http://localhost:3000", "https://testars.herokuapp.com/"],
+        origin: ["*"],
         methods: ["GET", "POST", "OPTIONS"],
         headers: "Content-Type"
         }
     });
 
-
+/* , "http://localhost:3000", "https://testars.herokuapp.com/" */
 
 async function getRooms() { 
     const sql = `SELECT * FROM rooms`
