@@ -1,0 +1,33 @@
+{"date":"2022-6-27 12:42:21","message":"Tja","user":"Sara","room":"fetcha"}
+{"date":"2022-6-27 12:41:31","message":"Hmmm","user":"Joakim","room":"fetcha"}
+{"date":"2022-6-27 12:42:26","message":"Hej babe","user":"Joakim","room":"fetcha"}
+{"date":"2022-6-27 12:42:29","message":"hej","user":"Sara","room":"fetcha"}
+{"date":"2022-6-27 12:42:41","message":"hehe","user":"Joakim","room":"fetcha"}
+{"date":"2022-6-27 12:42:47","message":"va händer då","user":"Sara","room":"fetcha"}
+{"date":"2022-6-27 12:42:50","message":"hej","user":"Joakim","room":"fetcha"}
+{"date":"2022-6-27 12:43:53","message":"§1213131","user":"Sara","room":"fetcha"}
+{"date":"2022-6-27 12:44:39","message":"Så kul med nya chatten! ","user":"Nils","room":"FEA21"}
+{"date":"2022-6-27 12:44:46","message":"Hihi eller hur ","user":"Oscar","room":"FEA21"}
+{"date":"2022-6-27 12:44:49","message":"visst","user":"Oscar","room":"FEA21"}
+{"date":"2022-6-27 12:45:2","message":"Vad är detta?","user":"Nils","room":"brinken"}
+{"date":"2022-6-27 12:45:11","message":"Vet ej faktiskt","user":"Oscar","room":"brinken"}
+{"date":"2022-8-24 15:59:45","message":"hgehjhej","user":"asdasdasd","room":"asdasdasd"}
+{"date":"2022-8-24 16:34:12","message":"hej","user":"pelle","room":"asd"}
+{"date":"2022-8-24 16:35:8","message":"eheheheheh","user":"pelle","room":"asd"}
+{"date":"2022-8-24 16:57:28","message":"hej","user":"mike","room":"ff"}
+{"date":"2022-8-24 16:58:3","message":"tja","user":"chike","room":"ff"}
+{"date":"2022-8-24 16:58:1","message":"hehe","user":"mike","room":"ff"}
+{"date":"2022-8-24 16:58:18","message":"wtf","user":"chike","room":"ff"}
+{"date":"2022-8-24 16:58:51","message":"hej","user":"mike","room":"ff"}
+{"date":"2022-8-24 17:0:3","message":"hej","user":"chike","room":"ff"}
+{"date":"2022-8-24 17:1:32","message":"hej","user":"chike","room":"ff"}
+{"date":"2022-8-24 17:1:32","message":"hej","user":"mike","room":"ff"}
+{"date":"2022-8-24 17:2:47","message":"hej","user":"chike","room":"ff"}
+{"date":"2022-8-24 17:2:47","message":"heheheheheh","user":"mike","room":"ff"}
+{"date":"2022-8-24 17:18:36","message":"hej","user":"hej","room":"hej"}
+{"date":"2022-8-25 14:9:21","message":"walk straight","user":"sara","room":"skola"}
+{"date":"2022-8-25 14:9:45","message":"for a clear resolution","user":"jocke","room":"skola"}
+{"date":"2022-8-25 14:9:50","message":"oh puttinutti, jag älskar dig älskling ","user":"jocke","room":"skola"}
+{"date":"2022-8-25 14:10:8","message":"hihih same bruv","user":"sara","room":"skola"}
+{"date":"2022-8-25 14:10:54","message":"hola compadres, que pasA? ","user":"frank","room":"skola"}
+{"date":"2022-8-25 14:14:42","message":"que tal?! hermano!","user":"sarte","room":"ledighet1"}
